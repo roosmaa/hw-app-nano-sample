@@ -1,0 +1,30 @@
+{
+  "name": "hw-app-nano-sample",
+  "version": "0.1.0",
+  "description": "Example web-app using hw-app-nano package",
+  "private": true,
+  "author": "Mart Roosmaa <mart@roosmaa.net>",
+  "license": "MIT",
+  "dependencies": {
+    "@ledgerhq/hw-transport-u2f": "^4.7.3",
+    "big-integer": "^1.6.28",
+    "hw-app-nano": "file:../hw-app-nano",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "react-scripts": "1.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "proxy": {
+    "/api": {
+      "target": "http://[::1]:7076/",
+      "pathRewrite": {
+        "^/api": ""
+      }
+    }
+  }
+}

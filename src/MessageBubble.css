@@ -1,0 +1,29 @@
+.MessageBubble {
+  position: fixed;
+  bottom: 50px;
+  left: 50%;
+  margin-left: -150px;
+
+  width: 300px;
+  padding: 10px 30px 10px 10px;
+
+  border-radius: 3px;
+  box-shadow: 1px 1px 8px 2px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.MessageBubble-error {
+  background-color: #c10d3d;
+  color: white;
+}
+
+.MessageBubble-message {
+}
+
+.MessageBubble-close {
+  user-select: none;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}

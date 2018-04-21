@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.row-label {
+  display: inline-block;
+  min-width: 180px;
+}
+
+input[type="text"], input[type="number"] {
+    min-width: 40em;
+}

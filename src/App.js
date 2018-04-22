@@ -216,7 +216,8 @@ class App extends Component {
 }
 
 function connectToLedger() {
-  return TransportU2F.open(null, 300).then(transport => {
+  return TransportU2F.open(null).then(transport => {
+    transport.setExchangeTimeout(300000); // 5 minutes
     const nano = new Nano(transport);
     return nano.getAppConfiguration()
     .then(conf => {

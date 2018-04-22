@@ -6,21 +6,11 @@ The U2F protocol is used to communicate with the dongle. For now, only Google Ch
 
 In order to run this application you need to have Nano node RPC running on `localhost:7076`. If you have it running on some other machine or port you can modify the reverse proxy in `packages.json`.
 
-To get started clone both hw-app-nano-sample and hw-app-nano repositories into the same directory, as such:
+To get started:
 
 ```
-$ mkdir ledger-nano; cd ledger-nano
 $ git clone https://github.com/roosmaa/hw-app-nano-sample.git
-$ git clone https://github.com/roosmaa/hw-app-nano.git
-```
-
-To build & run the demo project:
-
-```
-$ cd hw-app-nano/
-$ npm install
-$ npm run build
-$ cd ../hw-app-nano-sample/
+$ cd hw-app-nano-sample/
 $ npm install
 $ HTTPS=true npm run start
 ```

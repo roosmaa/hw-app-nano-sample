@@ -217,14 +217,25 @@ class App extends Component {
 
 function connectToLedger() {
   return TransportU2F.open(null).then(transport => {
-    transport.setExchangeTimeout(300000); // 5 minutes
+    // Set a short U2F timeout to quickly determine if the
+    // Ledger device is connected and Nano app open or not.
+    transport.setExchangeTimeout(5000); // 5 seconds
     const nano = new Nano(transport);
     return nano.getAppConfiguration()
     .then(conf => {
       if (conf.version !== "1.0.0") {
         return Promise.reject("Incompatible application version");
       }
+      // Set a longer U2F timeout such that the user would have time
+      // to review all the information on their Ledger device
+      transport.setExchangeTimeout(300000); // 10 minutes
       return nano;
+    }, err => {
+      if (err.id === 'U2F_5') {
+        return Promise.reject("Device not connected or Nano app not open");
+      } else {
+        return err;
+      }
     });
   });
 }

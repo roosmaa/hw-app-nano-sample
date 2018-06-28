@@ -144,9 +144,8 @@ class Account extends Component {
           <div>
             <span className="row-label">New balance:</span>
             <input
-              type="number"
+              type="text"
               title="New account balance"
-              min="0" step="10000000000000000000000000"
               value={this.state.balance.toString()}
               onChange={this.handleBalanceChange} />
           </div>

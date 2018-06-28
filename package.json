@@ -8,7 +8,7 @@
   "dependencies": {
     "@ledgerhq/hw-transport-u2f": "^4.15.0",
     "big-integer": "^1.6.32",
-    "hw-app-nano": "^1.0.0",
+    "hw-app-nano": "^1.1.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-scripts": "1.1.4"

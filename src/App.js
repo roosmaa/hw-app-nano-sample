@@ -223,7 +223,10 @@ function connectToLedger() {
     const nano = new Nano(transport);
     return nano.getAppConfiguration()
     .then(conf => {
-      if (conf.version !== "1.0.0") {
+      if (conf.coinName !== nano.coin.coinName) {
+        return Promise.reject(`${conf.coinName} app open.. Please open ${nano.coin.coinName} app instead`);
+      }
+      if (conf.version !== "1.0.0" && conf.version !== "1.1.0") {
         return Promise.reject("Incompatible application version");
       }
       // Set a longer U2F timeout such that the user would have time

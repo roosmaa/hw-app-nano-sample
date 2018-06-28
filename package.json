@@ -6,11 +6,11 @@
   "author": "Mart Roosmaa <mart@roosmaa.net>",
   "license": "MIT",
   "dependencies": {
-    "@ledgerhq/hw-transport-u2f": "^4.7.3",
-    "big-integer": "^1.6.28",
+    "@ledgerhq/hw-transport-u2f": "^4.15.0",
+    "big-integer": "^1.6.32",
     "hw-app-nano": "^1.0.0",
-    "react": "^16.3.2",
-    "react-dom": "^16.3.2",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
     "react-scripts": "1.1.4"
   },
   "scripts": {

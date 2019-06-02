@@ -226,8 +226,8 @@ function connectToLedger() {
       if (conf.coinName !== nano.coin.coinName) {
         return Promise.reject(`${conf.coinName} app open.. Please open ${nano.coin.coinName} app instead`);
       }
-      if (conf.version !== "1.0.0" && conf.version !== "1.1.0") {
-        return Promise.reject("Incompatible application version");
+      if (conf.version !== "1.0.0" && conf.version !== "1.1.0" && conf.version !== "1.2.0") {
+        return Promise.reject("Incompatible application version " + conf.version);
       }
       // Set a longer U2F timeout such that the user would have time
       // to review all the information on their Ledger device

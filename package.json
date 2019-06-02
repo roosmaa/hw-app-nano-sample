@@ -20,12 +20,5 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "proxy": {
-    "/api": {
-      "target": "http://[::1]:7076/",
-      "pathRewrite": {
-        "^/api": ""
-      }
-    }
   }
 }
